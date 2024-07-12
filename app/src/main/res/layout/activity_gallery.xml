@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- ImageView to display selected image -->
+
+    <!-- Title EditText -->
+
+    <!-- Location EditText -->
+    <ImageView
+            android:id="@+id/selectedImageView"
+            android:layout_width="347dp"
+            android:layout_height="286dp"
+            android:maxWidth="373dp"
+            android:maxHeight="316dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/titleEditText"
+            android:src="@drawable/no_image"
+            android:layout_margin="16dp"/>
+    <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="325dp"
+            android:layout_height="41dp"
+            android:hint="Title"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/selectedImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="40dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:id="@+id/locationEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="280dp"
+            android:hint="Location"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/titleEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:id="@+id/longitudeEditText"
+            android:layout_width="166dp"
+            android:layout_height="43dp"
+            android:hint="Longitude"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="0.995" app:layout_constraintTop_toBottomOf="@+id/locationEditText"
+            android:layout_marginTop="16dp"/>
+    <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/longitudeEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:id="@+id/timeEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Time"
+            android:inputType="time"
+            app:layout_constraintTop_toBottomOf="@id/dateEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:id="@+id/latitudeEditText"
+            android:layout_width="166dp"
+            android:layout_height="43dp"
+            android:hint="Latitude"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/locationEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp" app:layout_constraintHorizontal_bias="0.0"/>
+
+    <!-- Latitude EditText -->
+
+    <!-- Longitude EditText -->
+
+    <!-- Date EditText -->
+
+    <!-- Time EditText -->
+
+    <!-- Change Image Button -->
+
+    <!-- Apply Overlay Button -->
+    <Button
+            android:id="@+id/changeimagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Image"
+            app:layout_constraintTop_toBottomOf="@id/timeEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:onClick="changeImage" app:layout_constraintHorizontal_bias="0.155"
+            android:backgroundTint="@android:color/system_neutral1_800" app:cornerRadius="5dp"
+            android:textColor="@color/white"/>
+    <Button
+            android:id="@+id/applyOverlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply Overlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="applyOverlay"
+            app:layout_constraintHorizontal_bias="0.844" app:layout_constraintTop_toBottomOf="@+id/timeEditText"
+            android:layout_marginTop="8dp" android:backgroundTint="@android:color/system_neutral1_800"
+            app:cornerRadius="5dp" android:textColor="@color/white"/>
+    <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="39dp" app:srcCompat="@android:drawable/ic_menu_mylocation"
+            android:id="@+id/LocationSetter"
+            app:layout_constraintStart_toEndOf="@+id/locationEditText"
+            app:layout_constraintTop_toBottomOf="@+id/titleEditText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" app:layout_constraintHorizontal_bias="0.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
